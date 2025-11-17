@@ -4,7 +4,9 @@ const header = document.getElementsByTagName('h1')[0];
 const addButton = document.getElementById("addButton");
 const buttonDeleteToDoList = document.getElementById("clearButton");
 const inputToDo = document.getElementById("itemInput");
+const addItem = document.getElementById('addItem');
 const todoList = document.getElementById("todoList");
+const titleList = document.getElementById('titleList');
 const btnChangeLang = document.getElementById("changeLang");
 const btnCommunication = document.getElementById("communication");
 // loade event
@@ -25,7 +27,9 @@ function changeLang() {
     btnChangeLang.innerHTML = "Fa"
     addButton.innerHTML = "اضفه کردن"
     buttonDeleteToDoList.innerHTML = "حذف همه"
-    header.innerHTML = "لیست یادداشت ها"
+    header.innerHTML = "لیست یادداشت ها";
+    titleList.innerHTML = "یاددارشت ها";
+    addItem.innerText = "یادداشت جدید";
   } else {
 
   };

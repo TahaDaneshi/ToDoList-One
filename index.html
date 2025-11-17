@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <nav>
+  <nav dir="ltr">
     <div id="changeLang" class="nav-button">En</div>
     <a href="https://github.com/TahaDaneshi" class="nav-button">
       <div id="communication">github</div>
@@ -25,12 +25,12 @@
     <h1 class="text-center">Todo List App</h1>
 
     <div class="form-group">
-      <label for="itemInput">Add Item</label>
+      <label id="addItem" for="itemInput">Add Item</label>
       <input type="text" class="form-control" name="" id="itemInput" />
     </div>
     <button id="addButton" class="btn btn-primary">Add To List</button>
     <button id="clearButton" class="btn btn-danger">Clear Todo List</button>
-    <h3>Todo List</h3>
+    <h2 id="titleList">Todo List</h2>
     <ul id="todoList"></ul>
   </div>
 
