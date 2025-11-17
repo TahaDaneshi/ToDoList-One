@@ -1,4 +1,4 @@
-// get elements
+// ELEMENTS
 const addButton = document.getElementById("addButton")
 const buttonDeleteToDoList = document.getElementById("clearButton")
 const inputToDo = document.getElementById("itemInput")
@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
     localStorage.setItem('listToDo', JSON.stringify([]))
   }
 })
-// functions
+// FUNCTIONS
 function addToDo(text) {
   let li = document.createElement("li")
   let lable = document.createElement("label")
@@ -66,7 +66,7 @@ function addToDoLocalStorage() {
   value[length] = { text: inputToDo.value, status: false }
   localStorage.setItem("listToDo", JSON.stringify(value))
 }
-// events
+// EVENTS
 addButton.addEventListener("click", function () {
   if (inputToDo.value) {
     addToDoLocalStorage()
