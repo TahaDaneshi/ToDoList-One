@@ -1,9 +1,10 @@
 // ELEMENTS
-const addButton = document.getElementById("addButton")
-const buttonDeleteToDoList = document.getElementById("clearButton")
-const inputToDo = document.getElementById("itemInput")
-const todoList = document.getElementById("todoList")
-
+const addButton = document.getElementById("addButton");
+const buttonDeleteToDoList = document.getElementById("clearButton");
+const inputToDo = document.getElementById("itemInput");
+const todoList = document.getElementById("todoList");
+const btnChangeLang = document.getElementById("changeLang");
+const btnCommunication = document.getElementById("communication");
 // loade event
 window.addEventListener("load", function () {
   if (localStorage.getItem("listToDo") !== null) {
@@ -13,7 +14,7 @@ window.addEventListener("load", function () {
   } else {
     localStorage.setItem('listToDo', JSON.stringify([]))
   }
-})
+});
 // FUNCTIONS
 function addToDo(text) {
   let li = document.createElement("li")
