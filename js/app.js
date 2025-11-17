@@ -1,4 +1,6 @@
 // ELEMENTS
+const html = document.documentElement;
+const header = document.getElementsByTagName('h1')[0];
 const addButton = document.getElementById("addButton");
 const buttonDeleteToDoList = document.getElementById("clearButton");
 const inputToDo = document.getElementById("itemInput");
@@ -16,6 +18,18 @@ window.addEventListener("load", function () {
   }
 });
 // FUNCTIONS
+function changeLang() {
+  let currentLnag = btnChangeLang.innerText
+  if (currentLnag === 'En') {
+    html.dir = 'rtl'
+    btnChangeLang.innerHTML = "Fa"
+    addButton.innerHTML = "اضفه کردن"
+    buttonDeleteToDoList.innerHTML = "حذف همه"
+    header.innerHTML = "لیست یادداشت ها"
+  } else {
+
+  };
+};
 function addToDo(text) {
   let li = document.createElement("li")
   let lable = document.createElement("label")
@@ -88,3 +102,4 @@ buttonDeleteToDoList.addEventListener("click", function () {
   localStorage.setItem('listToDo', JSON.stringify([]))
   todoList.innerHTML = "";
 })
+btnChangeLang.addEventListener('click', changeLang);

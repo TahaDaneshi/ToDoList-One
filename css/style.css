@@ -3,6 +3,7 @@
   font-family: cursive;
   outline: none;
 }
+h1 {margin-top: 30px;}
 #todoList label{
   width: 80%;
 }
