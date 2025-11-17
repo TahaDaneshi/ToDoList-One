@@ -20,20 +20,6 @@ window.addEventListener("load", function () {
   }
 });
 // FUNCTIONS
-function changeLang() {
-  let currentLnag = btnChangeLang.innerText
-  if (currentLnag === 'En') {
-    html.dir = 'rtl'
-    btnChangeLang.innerHTML = "Fa"
-    addButton.innerHTML = "اضفه کردن"
-    buttonDeleteToDoList.innerHTML = "حذف همه"
-    header.innerHTML = "لیست یادداشت ها";
-    titleList.innerHTML = "یاددارشت ها";
-    addItem.innerText = "یادداشت جدید";
-  } else {
-
-  };
-};
 function addToDo(text) {
   let li = document.createElement("li")
   let lable = document.createElement("label")
@@ -106,4 +92,17 @@ buttonDeleteToDoList.addEventListener("click", function () {
   localStorage.setItem('listToDo', JSON.stringify([]))
   todoList.innerHTML = "";
 })
-btnChangeLang.addEventListener('click', changeLang);
+btnChangeLang.addEventListener('click', function () {
+  let currentLnag = btnChangeLang.innerText
+  if (currentLnag === 'En') {
+    html.dir = 'rtl'
+    btnChangeLang.innerHTML = "Fa"
+    addButton.innerHTML = "اضفه کردن"
+    buttonDeleteToDoList.innerHTML = "حذف همه"
+    header.innerHTML = "لیست یادداشت ها";
+    titleList.innerHTML = "یاددارشت ها";
+    addItem.innerText = "یادداشت جدید";
+  } else {
+    location.reload();
+  };
+});
