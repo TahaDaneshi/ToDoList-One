@@ -4,13 +4,15 @@
   outline: none;
 }
 h1 {margin-top: 30px;}
-#todoList label{
-  width: 80%;
-}
 li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+label {
+  width: max-content;
+  margin: 3px;
+  overflow-wrap: anywhere;
 }
 #todoList {
   display: flex;
