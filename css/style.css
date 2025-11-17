@@ -25,3 +25,24 @@
 #todoList .btn{
   margin-left: 10px;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left:0;
+}
+.nav-button {
+  display: inline;
+  border: gray 1px solid;
+  width: max-content;
+  padding: 3px;
+  margin: 5px 10%;
+  border-radius: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+.nav-button:hover {
+  outline: skyblue 1px dashed;
+}
