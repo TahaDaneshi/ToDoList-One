@@ -21,21 +21,23 @@ window.addEventListener("load", function () {
 });
 // FUNCTIONS
 function addToDo(text) {
-  let li = document.createElement("li")
-  let lable = document.createElement("label")
-  let completeButton = document.createElement("button")
-  let deleteButton = document.createElement("button")
+  let li = document.createElement("li");
+  let lable = document.createElement("label");
+  let completeButton = document.createElement("button");
+  let deleteButton = document.createElement("button");
+  let div = document.createElement("div");
   // add classes
-  li.classList.add("well")
-  completeButton.classList.add('btn', 'btn-success')
-  deleteButton.classList.add('btn', 'btn-danger')
+  li.classList.add("well");
+  completeButton.classList.add('btn', 'btn-success');
+  deleteButton.classList.add('btn', 'btn-danger');
   // text ToDo
   lable.innerHTML = text
   completeButton.innerHTML = "Complete"
   deleteButton.innerHTML = "Delete"
-  // Combine.
-  li.append(lable, completeButton, deleteButton)
-  todoList.append(li)
+  // Combine
+  div.append(completeButton, deleteButton);
+  li.append(lable, div);
+  todoList.append(li);
   //////// events notes
   let ToDoListLocalStorage = JSON.parse(localStorage.getItem("listToDo"))
   let index = ToDoListLocalStorage.findIndex(function (item) {
