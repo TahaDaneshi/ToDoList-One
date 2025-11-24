@@ -50,6 +50,7 @@ nav {
   border-radius: 15px;
   user-select: none;
   cursor: pointer;
+  height: 33px;
 }
 .nav-button:hover {
   outline: skyblue 1px dashed;
