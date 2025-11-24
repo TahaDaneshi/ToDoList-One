@@ -47,9 +47,8 @@ function addToDo(text) {
   deleteButton.addEventListener("click", function () {
     ToDoListLocalStorage.splice(index, 1)
     localStorage.setItem("listToDo", JSON.stringify(ToDoListLocalStorage))
-    console.log(ToDoListLocalStorage)
     let parentElement = deleteButton.parentElement
-    parentElement.remove()
+    parentElement.parentElement.remove()
   })
   //complete note
   completeButton.addEventListener("click", function () {
