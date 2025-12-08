@@ -1,6 +1,13 @@
+/* FONTS */
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../fonts/IRANSansXFaNum-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: swap;
+};
 * {
-  font-weight: 800;
-  font-family: cursive;
+  font-weight: bolder;
+  font-family: "IRANSans";
   outline: none;
 }
 h1 {margin-top: 30px;}
@@ -54,4 +61,9 @@ nav {
 }
 .nav-button:hover {
   outline: skyblue 1px dashed;
+}
+/* Tools */
+.IRFont{
+  font-family: "IRANSans";
+  font-weight: bold;
 }
