@@ -45,6 +45,7 @@ function addToDo(text) {
   let index = ToDoListLocalStorage.findIndex(function (item) {
     return item.text === text
   })
+  // FUNCTIONS
   //delete note
   deleteButton.addEventListener("click", function () {
     ToDoListLocalStorage = JSON.parse(localStorage.getItem("listToDo"))
@@ -60,22 +61,17 @@ function addToDo(text) {
       ToDoListLocalStorage[index].status = false
       localStorage.setItem("listToDo", JSON.stringify(ToDoListLocalStorage))
       lable.classList.remove("completed")
+      completeButton.innerHTML = completeButtonIcons[0]; // close eye
     } else {
       ToDoListLocalStorage[index].status = true
       localStorage.setItem("listToDo", JSON.stringify(ToDoListLocalStorage))
       lable.classList.add("completed")
+      completeButton.innerHTML = completeButtonIcons[1]; // open eye
     }
-    // chage eye
-    if (flagEye === 0) {
-      completeButton.innerHTML = completeButtonIcons[1];
-      flagEye = 1
-    } else {
-      completeButton.innerHTML = completeButtonIcons[0];
-      flagEye = 0
-    }
-  })
+  });
   if (ToDoListLocalStorage[index].status) {
     lable.classList.add("completed")
+    completeButton.innerHTML = completeButtonIcons[1]; // open eye
   }
 }
 function addToDoLocalStorage() {
